@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Three Box Probelm</h1>
+<p>
+    There are three doors. Behind one door is a car; behind the other two doors, goats. 
+    You pick a door, then the host, who knows what's behind the doors, opens one of the other two doors, revealing a goat.
+    You are then given the option: stick with your original pick or swich to the upopened door.
+    What should you do?
+</p>
+<div id="doors">
+    <div class="door" id="door1" onclick="selectDoor(1)">Door 1</div>
+    <div class="door" id="door2" onclick="selectDoor(2)">Door 2</div>
+    <div class="door" id="door3" onclick="selectDoor(3)">Door 3</div>
+
+</div>
+<p id="result"></p>
+<button id="switchButton" onclick="switchDoor()" style="display:none;">Switch Door</button>
+<button id="stayButton" onclick="stayDoor()" style="display:none;">Stay with Current Door</button>
+
+
+{% endblock content %}
+
